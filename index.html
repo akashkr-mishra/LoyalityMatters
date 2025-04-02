@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loyality Matters</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css2?family=Lato&display=swap);
+      @import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
+    </style>
+  </head>
+  <body>
+    <div id="webcrumbs">
+      <div class="w-full flex justify-center">
+        <div class="w-[1200px] bg-gradient-to-b from-pink-50 to-blue-50 font-sans overflow-hidden">
+          <nav class="flex items-center justify-between p-4 bg-white shadow-md">
+            <div class="flex items-center">
+              <svg class="w-10 h-10 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 15a7 7 0 110-14 7 7 0 010 14zm-1-8a1 1 0 112 0v3a1 1 0 11-2 0V9zm1-3a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="ml-2 text-xl font-bold text-pink-600">Support Space</span>
+            </div>
+            <div class="flex items-center space-x-6">
+              <a href="https://webcrumbs.cloud/placeholder" class="font-medium hover:text-pink-600 transition-colors duration-300 border-b-2 border-transparent hover:border-pink-600">Home</a>
+              <a href="https://webcrumbs.cloud/placeholder" class="font-medium hover:text-pink-600 transition-colors duration-300 border-b-2 border-transparent hover:border-pink-600">File Report</a>
+              <a href="https://webcrumbs.cloud/placeholder" class="font-medium hover:text-pink-600 transition-colors duration-300 border-b-2 border-transparent hover:border-pink-600">Learn More</a>
+              <a href="https://webcrumbs.cloud/placeholder" class="font-medium hover:text-pink-600 transition-colors duration-300 border-b-2 border-transparent hover:border-pink-600">Check Status</a>
+            </div>
+          </nav>
+          
+          <main class="py-20">
+            <div class="text-center mb-12">
+              <h1 class="text-4xl font-bold mb-4 text-pink-700">Safe Space for Everyone</h1>
+              <p class="text-xl max-w-2xl mx-auto text-blue-700">"The world is forgetting the true meaning of love. Report your unfaithful partner, and we'll set things right—through counsel or consequences. Loyalty deserves loyalty."</p>
+            </div>
+            
+            <div class="flex justify-center">
+              <div id="fileReportButton" class="relative cursor-pointer group" data-handler="handler_0">
+                <div class="absolute -inset-4 bg-gradient-to-r from-pink-400 to-blue-400 rounded-full blur-xl opacity-60 group-hover:opacity-100 animate-pulse transition-opacity duration-500"></div>
+                <button class="relative bg-white py-4 px-8 rounded-full shadow-lg transform transition-transform duration-300 group-hover:scale-105 flex items-center">
+                  <svg class="w-6 h-6 mr-2 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-lg font-semibold text-pink-700">File Report</span>
+                </button>
+              </div>
+            </div>
+            
+            <div id="reportFormModal" class="hidden absolute top-20 left-1/2 transform -translate-x-1/2 bg-white p-6 rounded-lg shadow-2xl w-[500px] z-10 border-t-4 border-pink-500">
+              <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold text-pink-700">File a Report</h2>
+                <button class="text-gray-500 hover:text-gray-700 transition-colors" data-handler="handler_1">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                </button>
+              </div>
+              
+              <form class="space-y-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                  <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500" placeholder="Enter your full name"/>
+                </div>
+                
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">Age</label>
+                  <input type="number" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500" placeholder="Enter your age" min="18"/>
+                </div>
+                
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">Gender</label>
+                  <div class="flex space-x-4">
+                    <label class="flex items-center">
+                      <input type="radio" name="gender" class="h-4 w-4 text-pink-600 focus:ring-pink-500" value="female"/>
+                      <span class="ml-2">Female</span>
+                    </label>
+                    <label class="flex items-center">
+                      <input type="radio" name="gender" class="h-4 w-4 text-pink-600 focus:ring-pink-500" data-handler="handler_2" value="male"/>
+                      <span class="ml-2">Male</span>
+                    </label>
+                  </div>
+                </div>
+                
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">Incident Type</label>
+                  <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+                    <option value="">Select incident type</option>
+                    <option value="harassment">Unfaithful</option>
+                    <option value="assault">Pervert</option>
+                    <option value="discrimination">Discrimination</option>
+                    <option value="stalking">Stalking Other</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">Evidence File</label>
+                  <div class="flex items-center justify-center w-full">
+                    <label class="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+                      <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                        <svg class="w-8 h-8 mb-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                        </svg>
+                        <p class="mb-2 text-sm text-gray-500">Click to upload or drag and drop</p>
+                        <p class="text-xs text-gray-500">Images, videos or documents</p>
+                      </div>
+                      <input type="file" class="hidden"/>
+                    </label>
+                  </div>
+                </div>
+                
+                <button type="submit" class="w-full bg-gradient-to-r from-pink-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md hover:from-pink-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+                  Submit Report
+                </button>
+              </form>
+            </div>
+            
+            <div id="maleAlert" class="hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-lg shadow-2xl w-[400px] z-20 border-t-4 border-blue-500 animate-bounce">
+              <div class="text-center">
+                <svg class="w-16 h-16 text-blue-500 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                </svg>
+                <h3 class="text-xl font-bold text-blue-700 mb-2">You are expecting a lot!</h3>
+                <p class="text-gray-600 mb-4">Grow up! You asked for it *Bhag Chutiye*</p>
+                <button class="bg-blue-500 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-600 transition-colors duration-300" data-handler="handler_3">
+                  Understood😢
+                </button>
+              </div>
+            </div>
+          </main>
+          
+          <div class="bg-white py-10 px-12 shadow-inner">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="bg-pink-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+                <svg class="w-12 h-12 text-pink-500 mb-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                </svg>
+                <h3 class="text-xl font-bold mb-2 text-pink-700">Get Information</h3>
+                <p class="text-gray-600">Access resources, articles, and guides about women's safety and rights.</p>
+              </div>
+              
+              <div class="bg-blue-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+                <svg class="w-12 h-12 text-blue-500 mb-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path>
+                  <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path>
+                </svg>
+                <h3 class="text-xl font-bold mb-2 text-blue-700">Get Support</h3>
+                <p class="text-gray-600">Connect with counselors and support groups for guidance and help.</p>
+              </div>
+              
+              <div class="bg-pink-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+                <svg class="w-12 h-12 text-pink-500 mb-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+                <h3 class="text-xl font-bold mb-2 text-pink-700">Legal Resources</h3>
+                <p class="text-gray-600">Find information about your legal rights and options available to you.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        content: ["./src/**/*.{html,js}"],
+        theme: {
+          "name": "Fun",
+          "fontFamily": {
+            "sans": ["Open Sans", "ui-sans-serif", "system-ui", "sans-serif", "\"Apple Color Emoji\"", "\"Segoe UI Emoji\"", "\"Segoe UI Symbol\"", "\"Noto Color Emoji\""]
+          },
+          "extend": {
+            "fontFamily": {
+              "title": ["Lato", "ui-sans-serif", "system-ui", "sans-serif", "\"Apple Color Emoji\"", "\"Segoe UI Emoji\"", "\"Segoe UI Symbol\"", "\"Noto Color Emoji\""],
+              "body": ["Open Sans", "ui-sans-serif", "system-ui", "sans-serif", "\"Apple Color Emoji\"", "\"Segoe UI Emoji\"", "\"Segoe UI Symbol\"", "\"Noto Color Emoji\""]
+            },
+            "colors": {
+              "neutral": {
+                "50": "#611BF8",
+                "100": "#5E1AF1",
+                "200": "#5B19E9",
+                "300": "#5819E2",
+                "400": "#5518DA",
+                "500": "#5217D3",
+                "600": "#270B63",
+                "700": "#1D084A",
+                "800": "#130532",
+                "900": "#0A0319",
+                "DEFAULT": "#611BF8"
+              },
+              "primary": {
+                "50": "#FDC6B7",
+                "100": "#FDB5A2",
+                "200": "#FC9D83",
+                "300": "#FB8464",
+                "400": "#FB6B45",
+                "500": "#FA5B30",
+                "600": "#E1522B",
+                "700": "#BC4424",
+                "800": "#96371D",
+                "900": "#702916",
+                "DEFAULT": "#FA5B30"
+              }
+            }
+          },
+          "fontSize": {
+            "xs": ["15px", {"lineHeight": "24px"}],
+            "sm": ["17.5px", {"lineHeight": "26.25px"}],
+            "base": ["20px", {"lineHeight": "32px"}],
+            "lg": ["22.5px", {"lineHeight": "33.75px"}],
+            "xl": ["25px", {"lineHeight": "35px"}],
+            "2xl": ["30px", {"lineHeight": "39px"}],
+            "3xl": ["37.5px", {"lineHeight": "45px"}],
+            "4xl": ["45px", {"lineHeight": "51.74999999999999px"}],
+            "5xl": ["60px", {"lineHeight": "66px"}],
+            "6xl": ["75px", {"lineHeight": "82.5px"}],
+            "7xl": ["90px", {"lineHeight": "94.5px"}],
+            "8xl": ["120px", {"lineHeight": "126px"}],
+            "9xl": ["160px", {"lineHeight": "168px"}]
+          },
+          "borderRadius": {
+            "none": "0px",
+            "sm": "6px",
+            "DEFAULT": "12px",
+            "md": "18px",
+            "lg": "24px",
+            "xl": "36px",
+            "2xl": "48px",
+            "3xl": "72px",
+            "full": "9999px"
+          },
+          "spacing": {
+            "0": "0px",
+            "1": "5px",
+            "2": "10px",
+            "3": "15px",
+            "4": "20px",
+            "5": "25px",
+            "6": "30px",
+            "7": "35px",
+            "8": "40px",
+            "9": "45px",
+            "10": "50px",
+            "11": "55px",
+            "12": "60px",
+            "14": "70px",
+            "16": "80px",
+            "20": "100px",
+            "24": "120px",
+            "28": "140px",
+            "32": "160px",
+            "36": "180px",
+            "40": "200px",
+            "44": "220px",
+            "48": "240px",
+            "52": "260px",
+            "56": "280px",
+            "60": "300px",
+            "64": "320px",
+            "72": "360px",
+            "80": "400px",
+            "96": "480px",
+            "px": "1px",
+            "0.5": "2.5px",
+            "1.5": "7.5px",
+            "2.5": "12.5px",
+            "3.5": "17.5px"
+          }
+        },
+        plugins: [],
+        important: '#webcrumbs'
+      };
+    </script>
+    <script>
+      document.querySelector('[data-handler="handler_0"]').addEventListener('click', () => {
+        document.getElementById('reportFormModal').classList.remove('hidden');
+      });
+      
+      document.querySelector('[data-handler="handler_1"]').addEventListener('click', () => {
+        document.getElementById('reportFormModal').classList.add('hidden');
+        document.getElementById('maleAlert').classList.add('hidden');
+      });
+      
+      document.querySelector('[data-handler="handler_2"]').addEventListener('click', () => {
+        document.getElementById('maleAlert').classList.remove('hidden');
+      });
+      
+      document.querySelector('[data-handler="handler_3"]').addEventListener('click', () => {
+        document.getElementById('maleAlert').classList.add('hidden');
+      });
+    </script>
+  </body>
+</html>
